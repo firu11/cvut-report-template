@@ -9,3 +9,9 @@ A thesis template for ČVUT (CTU in Prague) students. Not affiliated with the un
 <p align="center">
   <img alt="Ukázka titulní strany" src="./thumbnail.png" width="45%">
 </p>
+
+## Použití
+
+```sh
+typst init @preview/cvut-thesis:0.1.0
+```
