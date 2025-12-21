@@ -11,5 +11,5 @@ A thesis template for ČVUT (CTU in Prague) students. Not affiliated with the un
 
 ## Použití
 ```sh
-typst init @preview/cvut-thesis:0.1.0
+typst init @preview/cvut-thesis:0.1.0 example-project
 ```
