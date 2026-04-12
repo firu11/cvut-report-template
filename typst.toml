@@ -5,10 +5,10 @@ compiler = "0.14.2"
 authors = ["Filip Růžička <https://firu.dev>"]
 repository = "https://github.com/firu11/cvut-report-template"
 license = "MIT"
-description = "A report template for ČVUT (CTU in Prague) students."
+description = "A simple report template for ČVUT (CTU in Prague) students and their for term projects."
 entrypoint = "lib.typ"
-categories = ["report", "thesis", "paper"]
-keywords = ["cvut", "ctu", "czech-technical-university", "prague", "thesis", "report", "education", "engineering"]
+categories = ["report", "paper", "thesis"]
+keywords = ["cvut", "ctu", "czech-technical-university", "prague", "report", "paper", "thesis", "education", "engineering"]
 
 [template]
 path = "template"

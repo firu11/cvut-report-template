@@ -1,3 +1,13 @@
+// ČVUT (CTU in Prague) Report Template for term projects etc.
+//
+// Provides three public functions:
+//   - `report`:       full document setup (cover + table-of-content + body + bibliography)
+//   - `report-cover`: renders a standalone cover page
+//   - `report-toc`:   renders a custom table of content
+
+// Creates the title/cover page of the report.
+// Handles layout with university info on the left-top,
+// centered title/subtitle, and author info at the bottom.
 #let report-cover(
   title: "REPORT TITLE",
   subtitle: "REPORT SUBTITLE",
@@ -14,6 +24,7 @@
   )[
     #set align(center)
 
+    // logo + faculty/branch info
     #stack(dir: ltr, spacing: 1.3em)[
       #logo
     ][
@@ -26,12 +37,14 @@
       ]
     ]
 
+    // main title block vertically centered
     #align(horizon, block[
       #text(title, size: 26pt, weight: "bold")
       #v(-1.5em)
       #text(subtitle, size: 18pt)
     ])
 
+    // author and year information at the bottom
     #align(bottom, block[
       #text(author, 18pt)\
       #text(username, 12pt)
@@ -41,6 +54,9 @@
   ]
 }
 
+// Configures and displays the table of contents with custom styling.
+// Adjusts spacing and typography for different heading levels (1–4)
+// to create a clean, hierarchical TOC.
 #let report-toc(
   title: "TABLE OF CONTENTS TITLE",
 ) = {
@@ -53,12 +69,8 @@
     v(4pt) // space above
     text(it, weight: 500, size: 13pt)
   }
-  show outline.entry.where(level: 3): it => {
-    text(it, weight: 300, size: 12pt)
-  }
-  show outline.entry.where(level: 4): it => {
-    text(it, weight: 300, size: 11pt)
-  }
+  show outline.entry.where(level: 3): it => { text(it, weight: 300, size: 12pt) }
+  show outline.entry.where(level: 4): it => { text(it, weight: 300, size: 11pt) }
 
   page(
     numbering: none,
@@ -69,6 +81,14 @@
   ]
 }
 
+// Main report template function.
+// Sets up global document settings (metadata, page layout, typography),
+// applies custom styling for headings, paragraphs, figures and code blocks,
+// then assembles the document in this order:
+//   1. Cover page
+//   2. Table of contents
+//   3. Main body content
+//   4. Bibliography (if provided)
 #let report(
   title: "REPORT TITLE",
   subtitle: "REPORT SUBTITLE",
