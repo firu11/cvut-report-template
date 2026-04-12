@@ -1,14 +1,14 @@
 [package]
-name = "simple-cvut-thesis"
-version = "0.1.0"
+name = "simple-cvut-report"
+version = "0.2.0"
 compiler = "0.14.2"
 authors = ["Filip Růžička <https://firu.dev>"]
-repository = "https://github.com/firu11/cvut-thesis-template"
+repository = "https://github.com/firu11/cvut-report-template"
 license = "MIT"
-description = "A thesis template for ČVUT (CTU in Prague) students."
+description = "A report template for ČVUT (CTU in Prague) students."
 entrypoint = "lib.typ"
 categories = ["report", "thesis", "paper"]
-keywords = ["cvut", "ctu", "czech-technical-university", "prague", "thesis", "education", "engineering"]
+keywords = ["cvut", "ctu", "czech-technical-university", "prague", "thesis", "report", "education", "engineering"]
 
 [template]
 path = "template"
